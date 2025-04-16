@@ -10,14 +10,16 @@ const navItems = [
   { href: "/contact", label: "Contact" },
 ];
 
-export default function Header() {
+export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <header className="bg-gray-900 text-white sticky top-0 z-50 shadow">
-      <div className="max-w-6xl mx-auto px-3 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold">Thatchanin Moonphon</h1>
-        <nav className="flex gap-6">
+    <aside className="bg-gray-900 bg-opacity-80 text-white w-64 h-screen fixed top-0 right-0 z-50 shadow-lg backdrop-blur-md flex flex-col justify-between">
+      <div>
+        <div className="p-6 text-xl font-bold border-b border-gray-700">
+          Thatchanin Moonphon
+        </div>
+        <nav className="flex flex-col gap-4 p-6">
           {navItems.map(({ href, label }) => (
             <Link
               key={href}
@@ -31,6 +33,6 @@ export default function Header() {
           ))}
         </nav>
       </div>
-    </header>
+    </aside>
   );
 }
