@@ -1,16 +1,38 @@
+"use client";
+
+import { Mail, Github, Linkedin } from "lucide-react";
+import ContactItem from "@/components/ContactItem";
+
 export default function ContactPage() {
-    return (
-      <section className="space-y-4">
-        <h2 className="text-3xl font-semibold">Contact</h2>
-        <p className="text-gray-700">
+  return (
+    <section className="max-w-3xl mx-auto p-6 space-y-6">
+      <div className="text-center">
+        <h2 className="text-4xl font-bold text-gray-900 dark:text-white">Contact</h2>
+        <p className="mt-2 text-lg text-gray-600 dark:text-gray-300">
           Got a question or want to collaborate? Feel free to reach out.
         </p>
-        <ul className="space-y-2 text-blue-600">
-          <li>Email: <a href="mailto:titee@example.com" className="underline">titee@example.com</a></li>
-          <li>GitHub: <a href="https://github.com/your-github" className="underline">github.com/your-github</a></li>
-          <li>LinkedIn: <a href="https://linkedin.com/in/your-profile" className="underline">linkedin.com/in/your-profile</a></li>
-        </ul>
-      </section>
-    )
-  }
-  
+      </div>
+
+      <div className="bg-white dark:bg-gray-800 shadow-md rounded-2xl p-6 space-y-4">
+        <ContactItem
+          icon={<Mail className="w-5 h-5" />}
+          label="Email"
+          link="mailto:thatchanin.m@gmail.com"
+          text="thatchanin.m@gmail.com"
+        />
+        <ContactItem
+          icon={<Github className="w-5 h-5" />}
+          label="GitHub"
+          link="https://github.com/fasterrob"
+          text="github.com/fasterrob"
+        />
+        <ContactItem
+          icon={<Linkedin className="w-5 h-5" />}
+          label="LinkedIn"
+          link="https://www.linkedin.com/in/thatchanin-moonphon-6b6727289/"
+          text="linkedin.com/in/thatchanin-moonphon-6b6727289/"
+        />
+      </div>
+    </section>
+  );
+}
