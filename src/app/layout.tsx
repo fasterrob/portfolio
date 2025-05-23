@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Sidebar from "@/components/Sidebar";
 import "../styles/globals.css";
 import MotionWrapper from "@/components/MotionWrapper"; // Client-side animation wrapper
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
       >
         <MotionWrapper>{children}</MotionWrapper>
         <Sidebar />
+        <SpeedInsights />
       </body>
     </html>
   );
