@@ -14,13 +14,26 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: url("/images/bg.png");
     --foreground: #ededed;
   }
 }
-
+html,
 body {
   background: var(--background);
+  background-size: cover; /* Ensure it covers the screen */
+  background-repeat: no-repeat; /* Prevent repeating */
+  background-position: center; /* Center the image */
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: row; /* Adjust if Sidebar is on the side */
+  width: 100vw;
 }
