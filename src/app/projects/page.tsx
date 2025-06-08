@@ -9,6 +9,12 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: "TimeWash",
+    description: "A service ",
+    link: ":",
+    imageUrl: "/images/project1.jpg",
+  },
+  {
     title: "System Health Dashboard",
     description:
       "A monitoring system using FastAPI + Vue.js for real-time server health.",
@@ -23,7 +29,14 @@ const projects: Project[] = [
     imageUrl: "/images/project1.jpg",
   },
   {
-    title: "Dashboard For My Life",
+    title: "Dashboard My Life",
+    description:
+      "A personal dashboard using FastAPI + Vue.js for real-time server health.",
+    link: "https://github.com/fasterrob/system-health",
+    imageUrl: "/images/project1.jpg",
+  },
+  {
+    title: "Dashboard  My Life",
     description:
       "A personal dashboard using FastAPI + Vue.js for real-time server health.",
     link: "https://github.com/fasterrob/system-health",
@@ -33,8 +46,8 @@ const projects: Project[] = [
 
 export default function ProjectsPage() {
   return (
-    <section className="space-y-6">
-      <h2 className="text-3xl font-semibold">Projects</h2>
+    <section className="space-y-6 p-5 overflow-y-auto max-h-[100vh]">
+      <h2 className="text-center uppercase text-3xl font-semibold">Projects</h2>
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project) => (
           <ProjectCard

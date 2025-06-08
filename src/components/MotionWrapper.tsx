@@ -18,7 +18,7 @@ export default function MotionWrapper({
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
-        className="flex-1 p-6 mr-50"
+        className="flex-1"
       >
         {children}
       </motion.main>

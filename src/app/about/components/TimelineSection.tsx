@@ -7,11 +7,9 @@ interface TimelineItemProps {
 
 export default function TimelineSection({ title, items }: TimelineItemProps) {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow space-y-4">
-      <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
-        {title}
-      </h3>
-      <ul className="space-y-4 text-sm text-gray-600 dark:text-gray-400">
+    <div className="rounded-xl p-5 space-y-5">
+      <h3 className="text-xl font-semibold">{title}</h3>
+      <ul className="space-y-4 text-sm">
         {items.map((item, index) => (
           <TimelineItem
             key={index}

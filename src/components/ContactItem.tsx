@@ -20,13 +20,11 @@ export default function ContactItem({
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center space-x-4 text-blue-600 hover:underline"
+      className="h-40 w-60 flex rounded-lg flex-col justify-center p-3 gap-2 border-1 items-center text-center hover:bg-gray-400"
     >
-      <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-full">
-        {icon}
-      </div>
+      {icon}
       <div>
-        <div className="text-sm font-medium text-gray-700 dark:text-gray-300">
+        <div className="text-xl font-bold">
           {label}
         </div>
         <div>{text}</div>

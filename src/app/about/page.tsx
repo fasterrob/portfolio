@@ -15,8 +15,39 @@ export default function AboutPage() {
     { icon: <FaReact size={20} />, label: "React + tailwinds" },
   ];
 
+  const timelineWorkItems = ([] = [
+    {
+      year: "2025 (4 months)",
+      text: "Cloud Engineer (Internship) @ A-HOST Co. Ltd.",
+      emoji: "☁️",
+    },
+    {
+      year: "2024 (4 months)",
+      text: "Full-stack Developer @ Lambda",
+      emoji: "🛠️",
+    },
+    {
+      year: "2024 (9 months)",
+      text: "Front-End Developer @ Plaping Online Co. Ltd.",
+      emoji: "🛠️",
+    },
+  ]);
+
+  const timelineEducationItems = ([] = [
+    {
+      year: "2021–2025",
+      text: "B.IT, Thai-Nichi Institute of Technology",
+      emoji: "🎓",
+    },
+    {
+      year: "2018–2021",
+      text: "High School, Srinakharinwirot University Prasarnmit Demonstration school, Computer Program",
+      emoji: "🏫",
+    },
+  ]);
+
   return (
-    <section className="max-w-5xl mx-auto space-y-10">
+    <section className="p-5 mx-auto space-y-5">
       {/* Header + Profile */}
       <div className="flex flex-col md:flex-row items-center gap-8">
         <Image
@@ -27,23 +58,21 @@ export default function AboutPage() {
           className="rounded-full shadow-lg"
         />
         <div className="text-center md:text-left space-y-3">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-            About Me
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
+          <h2 className="text-4xl font-bold">About Me</h2>
+          <p className="text-lg">
             I’m an IT student passionate about building web apps and exploring
             new technologies.
           </p>
-          <p className="italic text-blue-600 dark:text-blue-400">
+          <p className="italic">
             “Keep learning. Keep sharing. Keep building.”
           </p>
         </div>
       </div>
 
       {/* About + Timeline */}
-      <div className="grid md:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {/* About Section */}
-        <div className="space-y-4 bg-white dark:bg-gray-800 p-6 rounded-2xl shadow text-gray-700 dark:text-gray-300 leading-relaxed">
+        <div className="p-5 rounded-xl shadow-lg leading-relaxed">
           <p>
             Full-stack web developer with a strong interest in technology and
             innovation. Experienced in building CRM systems, dashboards, and
@@ -58,41 +87,8 @@ export default function AboutPage() {
 
         {/* Timeline Section */}
         <div className="space-y-6">
-          <TimelineSection
-            title="Work Experience"
-            items={[
-              {
-                year: "2025 (4 months)",
-                text: "Cloud Engineer (Internship) @ A-HOST Co. Ltd.",
-                emoji: "☁️",
-              },
-              {
-                year: "2024 (4 months)",
-                text: "Full-stack Developer @ Lambda",
-                emoji: "🛠️",
-              },
-              {
-                year: "2024 (9 months)",
-                text: "Full-stack Developer @ Plaping Online Co. Ltd.",
-                emoji: "🛠️",
-              },
-            ]}
-          />
-          <TimelineSection
-            title="Education"
-            items={[
-              {
-                year: "2021–2025",
-                text: "B.IT, Thai-Nichi Institute of Technology",
-                emoji: "🎓",
-              },
-              {
-                year: "2018–2021",
-                text: "High School, Srinakharinwirot University Prasarnmit Demonstration school, Computer Program",
-                emoji: "🏫",
-              },
-            ]}
-          />
+          <TimelineSection title="Work Experience" items={timelineWorkItems} />
+          <TimelineSection title="Education" items={timelineEducationItems} />
         </div>
       </div>
 

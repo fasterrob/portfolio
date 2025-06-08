@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex bg-gradient-to-br from-[#1a1a2e] to-[#16213e] min-h-screen text-white`}
       >
         <MotionWrapper>{children}</MotionWrapper>
         <Sidebar />
