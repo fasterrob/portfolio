@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "ธัชนิน มูลผล | Full-Stack Developer",
   description:
-    "Hi, I'm ธัชนิน มูลผล (ตีตี้) — an IT student passionate about full-stack development.",
+    "Hi, I&apos;m ธัชนิน มูลผล (ตีตี้) — an IT student passionate about full-stack development.",
   authors: [{ name: "Tatchanin Moonphon" }],
 };
 

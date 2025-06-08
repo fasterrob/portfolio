@@ -8,7 +8,7 @@ export default function ContactPage() {
     <section className="h-full p-5 flex flex-col items-center justify-center space-y-5">
       <h1 className="text-3xl font-bold text-center">Contact Me</h1>
       <p className="text-center w-100 text-gray-600 dark:text-gray-400">
-        I'm a recent IT graduate actively seeking internship or entry-level
+        I&apos;m a recent IT graduate actively seeking internship or entry-level
         opportunities where I can contribute and grow. Feel free to reach out
         for job opportunities, collaboration, or any questions about my work!
       </p>
