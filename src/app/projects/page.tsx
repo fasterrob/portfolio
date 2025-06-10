@@ -3,44 +3,36 @@ import ProjectCard from "@/components/ProjectCard";
 type Project = {
   title: string;
   description: string;
+  details: string;
   link: string;
   imageUrl: string;
 };
 
 const projects: Project[] = [
   {
-    title: "TimeWash",
-    description: "A service ",
-    link: ":",
-    imageUrl: "/images/project1.jpg",
+    title: "Timewash",
+    description:
+      "A dashboard to visualize and analyze server health data using FastAPI, Vue 3, and Gemini AI.",
+    details:
+      "Developed a dashboard web app to visualize server health metrics. Integrated AI analysis using Gemini to generate monthly reports with recommendations.",
+    link: "https://github.com/fasterrob/system-health",
+    imageUrl: "/images/project-system-health.jpg",
   },
   {
-    title: "System Health Dashboard",
-    description:
-      "A monitoring system using FastAPI + Vue.js for real-time server health.",
-    link: "https://github.com/fasterrob/system-health",
-    imageUrl: "/images/project1.jpg",
+    title: "Customer Service Line Bot",
+    description: "A chatbot system built using LINE API, Vue.js, and Express.",
+    details:
+      "Built a LINE chatbot with custom chat UI for sending broadcast and greeting messages. Integrated MongoDB for message management and user tracking.",
+    link: "https://github.com/yourusername/linebot-customer-service", // Replace with real link
+    imageUrl: "/images/project-linebot.jpg",
   },
   {
-    title: "System Health Dashboar",
-    description:
-      "A monitoring system using FastAPI + Vue.js for real-time server health.",
-    link: "https://github.com/fasterrob/system-health",
-    imageUrl: "/images/project1.jpg",
-  },
-  {
-    title: "Dashboard My Life",
-    description:
-      "A personal dashboard using FastAPI + Vue.js for real-time server health.",
-    link: "https://github.com/fasterrob/system-health",
-    imageUrl: "/images/project1.jpg",
-  },
-  {
-    title: "Dashboard  My Life",
-    description:
-      "A personal dashboard using FastAPI + Vue.js for real-time server health.",
-    link: "https://github.com/fasterrob/system-health",
-    imageUrl: "/images/project1.jpg",
+    title: "Survey Web Application",
+    description: "Responsive web survey app built using Vue.js.",
+    details:
+      "Designed and implemented the frontend for a survey platform focused on clean UI/UX and integration readiness with backend APIs.",
+    link: "https://github.com/yourusername/survey-app", // Replace with real link
+    imageUrl: "/images/project-survey.jpg",
   },
 ];
 
@@ -54,6 +46,7 @@ export default function ProjectsPage() {
             key={project.title}
             title={project.title}
             description={project.description}
+            details={project.details}
             imageUrl={project.imageUrl}
             projectUrl={project.link}
           />
