@@ -1,1 +1,10 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@keyframes typewriter {
+  to {
+    left: '100%';
+  }
+  animation {
+    typewriter: 'typewriter 2s steps(11) forwards';
+  }
+}
