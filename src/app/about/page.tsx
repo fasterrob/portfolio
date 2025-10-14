@@ -17,6 +17,11 @@ export default function AboutPage() {
 
   const timelineWorkItems = ([] = [
     {
+      year: "2025 (Now)",
+      text: "Odoo Full stack developer @ 365Infotech Co. Ltd",
+      emoji: "🛠️",
+    },
+    {
       year: "2025 (4 months)",
       text: "Cloud Engineer (Internship) @ A-HOST Co. Ltd.",
       emoji: "☁️",
