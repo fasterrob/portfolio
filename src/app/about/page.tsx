@@ -1,25 +1,28 @@
 "use client";
 
 import Image from "next/image";
-import { BrainCircuit } from "lucide-react";
+import { FileCode } from "lucide-react";
 import { FaReact, FaVuejs } from "react-icons/fa";
-import { GrOracle } from "react-icons/gr";
+import { SiPython, SiJavascript, SiPostgresql, SiOdoo } from "react-icons/si";
 import TimelineSection from "@/app/about/components/TimelineSection";
 import TechItem from "@/app/about/components/TechItem";
 
 export default function AboutPage() {
   const techStack = [
-    { icon: <FaVuejs size={20} />, label: "Vue 3 + Vuetify" },
-    { icon: <BrainCircuit size={20} />, label: "FastAPI + Gemini AI" },
-    { icon: <GrOracle size={20} />, label: "Oracle 19c" },
-    { icon: <FaReact size={20} />, label: "React + tailwinds" },
+    { icon: <SiOdoo size={20} />, label: "Odoo ERP" },
+    { icon: <SiPython size={20} />, label: "Python" },
+    { icon: <SiJavascript size={20} />, label: "JavaScript" },
+    { icon: <SiPostgresql size={20} />, label: "PostgreSQL" },
+    { icon: <FileCode size={20} />, label: "XML" },
+    { icon: <FaVuejs size={20} />, label: "Vue 3" },
+    { icon: <FaReact size={20} />, label: "React" },
   ];
 
-  const timelineWorkItems = ([] = [
+  const timelineWorkItems = [
     {
       year: "2025 (Now)",
-      text: "Odoo Full stack developer @ 365Infotech Co. Ltd",
-      emoji: "🛠️",
+      text: "Team Lead Odoo Full Stack Developer @ 365Infotech Co. Ltd",
+      emoji: "🚀",
     },
     {
       year: "2025 (4 months)",
@@ -29,16 +32,16 @@ export default function AboutPage() {
     {
       year: "2024 (4 months)",
       text: "Full-stack Developer @ Lambda",
-      emoji: "🛠️",
+      emoji: "💻",
     },
     {
       year: "2024 (9 months)",
       text: "Front-End Developer @ Plaping Online Co. Ltd.",
-      emoji: "🛠️",
+      emoji: "🎨",
     },
-  ]);
+  ];
 
-  const timelineEducationItems = ([] = [
+  const timelineEducationItems = [
     {
       year: "2021–2025",
       text: "B.IT, Thai-Nichi Institute of Technology",
@@ -49,7 +52,7 @@ export default function AboutPage() {
       text: "High School, Srinakharinwirot University Prasarnmit Demonstration school, Computer Program",
       emoji: "🏫",
     },
-  ]);
+  ];
 
   return (
     <section className="p-5 mx-auto space-y-5">
@@ -65,11 +68,11 @@ export default function AboutPage() {
         <div className="text-center md:text-left space-y-3">
           <h2 className="text-4xl font-bold">About Me</h2>
           <p className="text-lg">
-            I’m an IT student passionate about building web apps and exploring
-            new technologies.
+            Team Lead Odoo Full Stack Developer specializing in ERP solutions
+            and business process optimization.
           </p>
           <p className="italic">
-            “Keep learning. Keep sharing. Keep building.”
+            “Translating complex business needs into efficient Odoo solutions.”
           </p>
         </div>
       </div>
@@ -77,16 +80,23 @@ export default function AboutPage() {
       {/* About + Timeline */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {/* About Section */}
-        <div className="p-5 rounded-xl shadow-lg leading-relaxed">
+        <div className="p-5 rounded-xl shadow-lg leading-relaxed space-y-4">
           <p>
-            Full-stack web developer with a strong interest in technology and
-            innovation. Experienced in building CRM systems, dashboards, and
-            AI-integrated tools.
+            As a <strong>Team Lead Odoo Full Stack Developer</strong>, I specialize in
+            architecting and delivering comprehensive ERP solutions. I possess
+            strong proficiency in the <strong>Sales, Purchase, and Inventory</strong> modules,
+            along with solid experience in <strong>Accounting</strong> workflows. My role
+            involves not only resolving complex user issues but also engineering
+            custom modules that align perfectly with specific business requirements.
           </p>
           <p>
-            Skilled in frontend development with Vue and backend API development
-            using FastAPI. Passionate about problem-solving, collaboration, and
-            turning ideas into impactful digital solutions.
+            I bring a leadership perspective to development, managing teams to
+            ensure project milestones are met with high quality. My technical
+            expertise spans the full Odoo stack—<strong>Python, JavaScript, XML, and
+            PostgreSQL</strong>—allowing me to drive process improvements and deliver
+            high-quality results. I am driven by problem-solving and have a track
+            record of quantifiable achievements in process improvements and successful
+            project deliveries.
           </p>
         </div>
 
