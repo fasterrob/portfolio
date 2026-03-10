@@ -24,7 +24,8 @@ export default function Sidebar() {
       {/* Hamburger Button */}
       <button
         onClick={toggleSidebar}
-        className="fixed top-4 right-4 z-50 text-white lg:hidden"
+        aria-label="Toggle Menu"
+        className="fixed top-4 right-4 z-50 text-white lg:hidden p-2 rounded-md bg-gray-800/50 backdrop-blur-sm"
       >
         {isOpen ? <FiX size={32} /> : <FiMenu size={32} />}
       </button>
@@ -32,16 +33,16 @@ export default function Sidebar() {
       {/* Overlay for mobile when open */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden backdrop-blur-sm"
           onClick={closeSidebar}
         />
       )}
 
       {/* Sidebar */}
       <aside
-        className={`fixed top-0 right-0 h-screen w-55 bg-[#0f172a] border-l border-[#1f2937] backdrop-blur-md text-white z-50 transition-transform duration-300 
+        className={`fixed top-0 right-0 h-screen w-64 bg-[#0f172a] border-l border-[#1f2937] text-white z-50 transition-transform duration-300 
         ${isOpen ? "translate-x-0" : "translate-x-full"} 
-        lg:translate-x-0 lg:static lg:flex lg:flex-col`}
+        lg:translate-x-0 lg:static lg:flex lg:flex-col shrink-0`}
       >
         <nav className="flex flex-col gap-4 p-5 h-full">
           {navItems.map(({ icon, href, label }) => (

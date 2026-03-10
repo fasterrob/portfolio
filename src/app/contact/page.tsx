@@ -5,14 +5,14 @@ import ContactItem from "@/components/ContactItem";
 
 export default function ContactPage() {
   return (
-    <section className="h-full p-5 flex flex-col items-center justify-center space-y-5">
+    <section className="min-h-screen p-5 flex flex-col items-center justify-center space-y-8">
       <h1 className="text-3xl font-bold text-center">Contact Me</h1>
-      <p className="text-center w-100 text-gray-600 dark:text-gray-400">
+      <p className="text-center max-w-2xl w-full text-gray-600 dark:text-gray-400 px-4">
         I&apos;m a recent IT graduate actively seeking internship or entry-level
         opportunities where I can contribute and grow. Feel free to reach out
         for job opportunities, collaboration, or any questions about my work!
       </p>
-      <div className="flex p-5 gap-10">
+      <div className="flex flex-wrap justify-center gap-6 w-full max-w-4xl">
         <ContactItem
           icon={<Mail className="w-5 h-5" />}
           label="Email"

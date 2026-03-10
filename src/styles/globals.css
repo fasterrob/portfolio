@@ -1,12 +1,34 @@
 @import 'tailwindcss';
 
 @keyframes typewriter {
-  to {
-    left: '100%';
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: 
+    typewriter 3.5s steps(40, end),
+    blink 0.75s step-end infinite;
+}
+
+@media (max-width: 640px) {
+  .typewriter {
+    white-space: normal;
+    animation: none;
+    border-right: none;
+    width: auto;
   }
-  animation {
-    typewriter: 'typewriter 2s steps(11) forwards';
-  }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: white }
 }
 
 @layer utilities {

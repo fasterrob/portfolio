@@ -20,14 +20,14 @@ export default function ContactItem({
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="h-40 w-60 flex rounded-lg flex-col justify-center p-3 gap-2 border-1 items-center text-center hover:bg-gray-400"
+      className="w-full sm:w-60 min-h-[160px] flex rounded-lg flex-col justify-center p-4 gap-2 border border-gray-200 dark:border-gray-700 items-center text-center hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
     >
       {icon}
-      <div>
-        <div className="text-xl font-bold">
+      <div className="w-full overflow-hidden">
+        <div className="text-xl font-bold mb-1">
           {label}
         </div>
-        <div>{text}</div>
+        <div className="text-sm break-all">{text}</div>
       </div>
     </a>
   );

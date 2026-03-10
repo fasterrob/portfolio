@@ -38,9 +38,9 @@ const projects: Project[] = [
 
 export default function ProjectsPage() {
   return (
-    <section className="space-y-6 p-5 overflow-y-auto max-h-[100vh]">
+    <section className="space-y-6 p-5 min-h-screen">
       <h2 className="text-center uppercase text-3xl font-semibold">Projects</h2>
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
         {projects.map((project) => (
           <ProjectCard
             key={project.title}
