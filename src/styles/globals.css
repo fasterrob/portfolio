@@ -2,7 +2,7 @@
 
 @keyframes typewriter {
   from { width: 0; }
-  to { width: 100%; }
+  to { width: var(--typewriter-width, 100%); }
 }
 
 .typewriter {
@@ -13,7 +13,7 @@
   margin: 0 auto;
   letter-spacing: 0.15em;
   animation: 
-    typewriter 3.5s steps(40, end),
+    typewriter 3.5s steps(var(--typewriter-steps, 40), end),
     blink 0.75s step-end infinite;
 }
 
@@ -29,6 +29,16 @@
 @keyframes blink {
   from, to { border-color: transparent }
   50% { border-color: white }
+}
+
+@layer base {
+  html {
+    background-color: #1a1a2e;
+    overflow-x: hidden;
+  }
+  body {
+    overflow-x: hidden;
+  }
 }
 
 @layer utilities {

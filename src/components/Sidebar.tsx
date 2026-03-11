@@ -42,7 +42,7 @@ export default function Sidebar() {
       <aside
         className={`fixed top-0 right-0 h-screen w-64 bg-[#0f172a] border-l border-[#1f2937] text-white z-50 transition-transform duration-300 
         ${isOpen ? "translate-x-0" : "translate-x-full"} 
-        lg:translate-x-0 lg:static lg:flex lg:flex-col shrink-0`}
+        lg:translate-x-0 lg:static lg:h-auto lg:min-h-screen lg:flex lg:flex-col shrink-0`}
       >
         <nav className="flex flex-col gap-4 p-5 h-full">
           {navItems.map(({ icon, href, label }) => (
